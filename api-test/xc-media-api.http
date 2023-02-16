@@ -1,21 +1,9 @@
-###
-GET /delete
+### 上传文件
+POST {{media_host}}/media/upload/coursefile
+Content-Type: multipart/form-data; boundary=WebAppBoundary
 
-###
-GET /save
+--WebAppBoundary
+Content-Disposition: form-data; name="filedata"; filename="widget-timg.jpeg"
+Content-Type: application/octet-stream
 
-###
-POST http://localhost/books
-
-###
-GET http://localhost:8080/books/{{id}}
-
-### 课程查询接口
-POST {{content_host}}/content/course/list??pageNo=1&pageSize=2
-Content-Type: application/json
-
-{
-  "auditStatus": "202004",
-  "courseName": "",
-  "publishStatus": ""
-}
+< d:/develop/upload/widget-timg.jpeg
